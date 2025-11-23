@@ -1,4 +1,4 @@
-# 🚀 IW Ram Cleaner | Night Club Edition
+# 🧹 IW Ram Cleaner | Night Club Edition
 
 ## 🌟 Proje Hakkında
 
