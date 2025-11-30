@@ -42,6 +42,10 @@ python iw_ram_cleaner.py
 
 -----
 
+## ⬇️ Kullanıcı İndirme ve Başlatma
+
+Uygulamanın çalıştırılabilir (.exe) versiyonunu indirmek için lütfen **GitHub Releases** sayfasına gidin ve en güncel sürümü (örneğin v0.0.1-beta etiketi altındaki **iw_ram_cleaner.exe** dosyasını) indirin.
+
 ## 🖥️ Kullanım Rehberi
 
 1.  **RAM Durumu:** Üstteki bilgi çubuğundan anlık sistem RAM kullanımınızı kontrol edin.
