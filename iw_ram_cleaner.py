@@ -264,7 +264,7 @@ class RamCleanerApp:
         self.last_net_io = current
 
         self.net_label.config(text=f"Ağ: ↓{recv_kbps:.0f} KB/s   ↑{sent_kbps:.0f} KB/s")
-        # Temsili progressbar (maksimum 1000 KB/s kabul ediyoruz)
+        # Temsili progressbar (maksimum 1000 KB/s kabul)
         self.net_recv_bar['value'] = min(recv_kbps / 10, 100)
         self.net_sent_bar['value'] = min(sent_kbps / 10, 100)
 
@@ -318,3 +318,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = RamCleanerApp(root)
     root.mainloop()
+
