@@ -1,3 +1,12 @@
+<div align="center">
+  <img src="https://img.shields.io/github/languages/count/ibrahimyigitcetin/IW-Ram-Cleaner?style=flat-square&color=blueviolet" alt="Language Count">
+  <img src="https://img.shields.io/github/languages/top/ibrahimyigitcetin/IW-Ram-Cleaner?style=flat-square&color=1e90ff" alt="Top Language">
+  <img src="https://img.shields.io/github/last-commit/ibrahimyigitcetin/IW-Ram-Cleaner?style=flat-square&color=ff69b4" alt="Last Commit">
+  <img src="https://img.shields.io/github/license/ibrahimyigitcetin/IW-Ram-Cleaner?style=flat-square&color=yellow" alt="License">
+  <img src="https://img.shields.io/badge/Status-Active-green?style=flat-square" alt="Status">
+  <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square" alt="Contributions">
+</div>
+
 # 🧹 IW Ram Cleaner | Night Club Edition
 
 ## 🌟 Proje Hakkında
