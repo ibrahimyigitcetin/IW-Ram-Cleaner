@@ -21,9 +21,10 @@ Uygulama, klasik **"Retro Night Club Game"** estetiği ile tasarlanmıştır; ka
 | :--- | :--- |
 | **🛡️ Akıllı Koruma (Safe Kill)** | Uygulama, `csrss.exe`, `winlogon.exe` gibi kritik Windows sistem süreçlerini tanır. Bu süreçlerin yanlışlıkla sonlandırılması otomatik olarak engellenir ve kullanıcıya sistemi çökme potansiyeli hakkında güçlü bir uyarı sunulur. |
 | **📈 Detaylı Bellek Metrikleri** | Süreç listesinde iki önemli bellek metriği yer alır: **RSS (Resident Set Size)**: Sürecin fiziksel RAM'de (Gerçek RAM) kullandığı miktar. **VMS (Virtual Memory Size)**: Sürecin tahsis ettiği toplam sanal bellek miktarı. |
-| **Sistem RAM Genel Bakışı** | Pencerenin üst kısmında, sisteminizin **Toplam**, **Kullanılan** ve **Boş** RAM miktarlarını gösteren anlık, güncel bilgi çubuğu bulunur. |
-| **Çoklu Seçim ve Filtreleme** | Tek bir tıklama ve sürükleme hareketiyle veya **`Ctrl` / `Shift`** tuşlarıyla birden fazla süreci seçin. Üstteki arama kutusu, süreç **Adı** veya **PID** (İşlem Numarası) ile anında, yüksek performanslı filtreleme sağlar. |
-| **Gelişmiş Kullanıcı Deneyimi (UX)** | Uygulama, hızlı etkileşim için klavye kısayollarını destekler: **`F5`** ile listeyi yenileme ve **`Delete`** ile seçili süreçleri sonlandırma. Ayrıca, butonlar üzerinde bilgi sağlayan **Tooltip'ler** bulunur. |
+| **📊 Sistem RAM Genel Bakışı** | Pencerenin üst kısmında, sisteminizin **Toplam**, **Kullanılan** ve **Boş** RAM miktarlarını gösteren anlık, güncel bilgi çubuğu bulunur. |
+| **🔍 Çoklu Seçim ve Filtreleme** | Tek bir tıklama ve sürükleme hareketiyle veya **`Ctrl` / `Shift`** tuşlarıyla birden fazla süreci seçin. Üstteki arama kutusu, süreç **Adı** veya **PID** (İşlem Numarası) ile anında, yüksek performanslı filtreleme sağlar. |
+| **🔝 Akıllı Sıralama** | Liste, başlangıçta **en çok RAM (RSS)** kullanan uygulamaları üste getiren **akıllı sıralama** ile açılır. Sütun başlıklarına tıklayarak sıralamayı değiştirebilirsiniz; ilk tıklama azalan (en yüksek üstte), sonraki tıklama ise artan düzene geçirir ve sıralama sayısal/alfabetik olarak doğru yapılır. |
+| **⚡ Gelişmiş Kullanıcı Deneyimi (UX)** | Uygulama, hızlı etkileşim için klavye kısayollarını destekler: **`F5`** ile listeyi yenileme ve **`Delete`** ile seçili süreçleri sonlandırma. Ayrıca, butonlar üzerinde bilgi sağlayan **Tooltip'ler** bulunur. |
 
 -----
 
@@ -57,25 +58,30 @@ Uygulamanın çalıştırılabilir (.exe) versiyonunu indirmek için lütfen **G
 
 ## 🖥️ Kullanım Rehberi
 
-1.  **RAM Durumu:** Üstteki bilgi çubuğundan anlık sistem RAM kullanımınızı kontrol edin.
-2.  **Hedefleme:** Liste, en çok fiziksel RAM tüketen süreçten başlayarak sıralanır.
-3.  **Filtreleme:** Hızlıca bir süreç bulmak için **"Arama"** kutusunu kullanın.
-4.  **Serbestleştirme:**
-      * Bir veya daha fazla süreci seçin.
-      * **`☢️ RAM SERBEST BIRAK`** butonuna tıklayın veya klavyeden **`Delete`** tuşuna basın.
-      * Uygulama, güvenli olmayan işlemler için size kritik uyarılar sunacaktır.
-5.  **Güncelleme:** Listeyi ve sistem RAM bilgilerini yenilemek için **`🔄 YENİLE (F5)`** butonunu kullanın.
+1. **Üst Panel** → CPU, RAM, Disk ve Ağ hızınızı gerçek zamanlı izleyin.
+2. **RAM Durumu** → Toplam / Kullanılan / Boşta bellek miktarları detaylı gösterilir.
+3. **Süreç Listesi** → En çok RAM tüketen süreçler başta gelir. Kritik olanlar 🚨 ile işaretlenir.
+4. **Arama** → Süreç adı veya PID yazarak hızlı filtreleme yapın.
+5. **Sonlandırma**
+   - Bir veya birden fazla süreci seçin (`Ctrl` / `Shift` veya sürükle).
+   - `💥 RAM SERBEST BIRAK / SONLANDIR` butonuna tıklayın ya da `Delete` tuşuna basın.
+   - Kritik süreçler otomatik engellenir, onay istenir.
+6. **Yenileme** → `🔄 YENİLE (F5)` butonu veya F5 tuşu ile tüm verileri güncelleyin.
 
 -----
 
 ## 🎨 Retro Tema Renk Şeması
 
-| Bileşen | Hex Kodu | Açıklama |
-| :--- | :--- | :--- |
-| **Arka Plan** | `#1A1A1A` | Koyu Gece Siyahı (BG\_DARK) |
-| **Ana Vurgu** | `#00FFFF` (CYAN) | RAM Bilgisi, Normal Butonlar, Liste Metni |
-| **Kritik Vurgu** | `#FF00FF` (PINK) | Başlıklar, Seçili Öğeler, KILL Butonu |
-| **Yazı Tipi** | `Consolas` | Retro Terminal Görünümü |
+| Bileşen          | Hex Kodu    | Açıklama                  |
+|------------------|-------------|---------------------------|
+| **Derin Arka Plan** | `#0a0a0a`   | Ana BG                    |
+| **Katman 1**        | `#1a1a1a`   | Paneller                  |
+| **Katman 2**        | `#252525`   | İç çerçeveler             |
+| **Neon Cyan**       | `#00BFFF`   | RAM, normal butonlar      |
+| **Neon Pembe**      | `#FF1493`   | Başlıklar, kill butonu    |
+| **Neon Mor**        | `#9D00FF`   | Border ve vurgular        |
+| **Neon Kırmızı**    | `#FF0055`   | Kritik uyarılar           |
+| **Neon Yeşil**      | `#00FF7F`   | İstatistikler             |
 
 -----
 
