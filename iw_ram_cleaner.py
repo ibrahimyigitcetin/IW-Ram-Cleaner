@@ -234,7 +234,7 @@ class RamCleanerApp:
         )
         self.ram_info_label.pack(pady=6, padx=10)
 
-        # Göstergeler Frame (SIEM Tarzı Katmanlı)
+        # Göstergeler Frame 
         gauges_outer = tk.Frame(top_frame, bg=BG_LAYER1, relief="flat", highlightthickness=2, highlightbackground=BORDER)
         gauges_outer.pack(fill="x", pady=(0, 10))
         
@@ -610,3 +610,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = RamCleanerApp(root)
     root.mainloop()
+
