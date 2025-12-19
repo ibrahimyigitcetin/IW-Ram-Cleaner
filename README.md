@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square" alt="Contributions">
 </div>
 
-# 🧹 IW Ram Cleaner | Retro Night Club Edition
+# 🌌 IW Ram Cleaner | Retro Night Club Edition
 
 ## 🌟 Proje Hakkında
 
