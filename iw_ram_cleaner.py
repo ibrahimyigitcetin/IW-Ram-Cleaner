@@ -2,7 +2,7 @@ import os
 import time
 import tkinter as tk
 from tkinter import ttk, messagebox
-import psutil  # type: ignore
+import psutil 
 
 
 # ====================== AYARLAR ======================
@@ -610,4 +610,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = RamCleanerApp(root)
     root.mainloop()
+
 
