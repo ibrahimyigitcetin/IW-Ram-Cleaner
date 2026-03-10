@@ -15,6 +15,8 @@
 
 Uygulama, klasik **"Retro Night Club Game"** estetiği ile tasarlanmıştır; karanlık arka planlar, neon renkler (Cyan ve Pembe) ve `Consolas` yazı tipi kullanarak sistem yönetimine dinamik ve eğlenceli bir yaklaşım getirir.
 
+![IW Ram Cleaner](./docs/iwrc.png)
+
 ### ✨ Güçlü Özellikler
 
 | Özellik | Detaylı Açıklama |
