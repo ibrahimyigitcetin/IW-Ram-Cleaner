@@ -9,94 +9,98 @@
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square" alt="Contributions">
 </div>
 
-## 🌟 Proje Hakkında
+## 🌟 About the Project
 
-**IW Ram Cleaner**, sisteminizdeki RAM (Bellek) tüketimini yönetmek için tasarlanmış, güçlü ve estetik bir Python uygulamasıdır. Yüksek kaynak kullanan veya yanıt vermeyen süreçleri kolayca tespit etmenizi sağlar ve akıllı **güvenli sonlandırma (Safe Kill)** mekanizması ile sistem kararlılığınızı koruyarak anında bellek serbestleştirme imkanı sunar.
+**IW Ram Cleaner** is a powerful and aesthetic Python application designed to manage RAM (Memory) consumption on your system. It allows you to easily detect high-resource or unresponsive processes and instantly free up memory while preserving system stability through its intelligent **Safe Kill** mechanism.
 
-Uygulama, klasik **"Retro Night Club Game"** estetiği ile tasarlanmıştır; karanlık arka planlar, neon renkler (Cyan ve Pembe) ve `Consolas` yazı tipi kullanarak sistem yönetimine dinamik ve eğlenceli bir yaklaşım getirir.
+The application is designed with a classic **"Retro Night Club Game"** aesthetic; it brings a dynamic and enjoyable approach to system management using dark backgrounds, neon colors (Cyan and Pink), and the `Consolas` font.
 
 ![IW Ram Cleaner](./docs/iwrc.png)
 
-### ✨ Güçlü Özellikler
+### ✨ Powerful Features
 
-| Özellik | Detaylı Açıklama |
+| Feature | Detailed Description |
 | :--- | :--- |
-| **🛡️ Akıllı Koruma (Safe Kill)** | Uygulama, `csrss.exe`, `winlogon.exe` gibi kritik Windows sistem süreçlerini tanır. Bu süreçlerin yanlışlıkla sonlandırılması otomatik olarak engellenir ve kullanıcıya sistemi çökme potansiyeli hakkında güçlü bir uyarı sunulur. |
-| **📈 Detaylı Bellek Metrikleri** | Süreç listesinde iki önemli bellek metriği yer alır: **RSS (Resident Set Size)**: Sürecin fiziksel RAM'de (Gerçek RAM) kullandığı miktar. **VMS (Virtual Memory Size)**: Sürecin tahsis ettiği toplam sanal bellek miktarı. |
-| **📊 Sistem RAM Genel Bakışı** | Pencerenin üst kısmında, sisteminizin **Toplam**, **Kullanılan** ve **Boş** RAM miktarlarını gösteren anlık, güncel bilgi çubuğu bulunur. |
-| **🔍 Çoklu Seçim ve Filtreleme** | Tek bir tıklama ve sürükleme hareketiyle veya **`Ctrl` / `Shift`** tuşlarıyla birden fazla süreci seçin. Üstteki arama kutusu, süreç **Adı** veya **PID** (İşlem Numarası) ile anında, yüksek performanslı filtreleme sağlar. |
-| **🔝 Akıllı Sıralama** | Liste, başlangıçta **en çok RAM (RSS)** kullanan uygulamaları üste getiren **akıllı sıralama** ile açılır. Sütun başlıklarına tıklayarak sıralamayı değiştirebilirsiniz; ilk tıklama azalan (en yüksek üstte), sonraki tıklama ise artan düzene geçirir ve sıralama sayısal/alfabetik olarak doğru yapılır. |
-| **⚡ Gelişmiş Kullanıcı Deneyimi (UX)** | Uygulama, hızlı etkileşim için klavye kısayollarını destekler: **`F5`** ile listeyi yenileme ve **`Delete`** ile seçili süreçleri sonlandırma. Ayrıca, butonlar üzerinde bilgi sağlayan **Tooltip'ler** bulunur. |
+| **🛡️ Smart Protection (Safe Kill)** | The application recognizes critical Windows system processes such as `csrss.exe` and `winlogon.exe`. Accidental termination of these processes is automatically blocked and the user is presented with a strong warning about the potential for system crashes. |
+| **📈 Detailed Memory Metrics** | The process list includes two important memory metrics: **RSS (Resident Set Size)**: The amount the process is using in physical RAM (Real RAM). **VMS (Virtual Memory Size)**: The total amount of virtual memory allocated by the process. |
+| **📊 System RAM Overview** | At the top of the window, there is a real-time, up-to-date information bar showing your system's **Total**, **Used**, and **Free** RAM amounts. |
+| **🔍 Multi-Select and Filtering** | Select multiple processes with a single click and drag, or using **`Ctrl` / `Shift`** keys. The search box at the top provides instant, high-performance filtering by process **Name** or **PID** (Process ID). |
+| **🔝 Smart Sorting** | The list opens with **smart sorting** that brings the applications consuming the **most RAM (RSS)** to the top. You can change the sort order by clicking column headers; the first click switches to descending order (highest on top), the next click switches to ascending order, and sorting is performed correctly numerically/alphabetically. |
+| **⚡ Enhanced User Experience (UX)** | The application supports keyboard shortcuts for fast interaction: refresh the list with **`F5`** and terminate selected processes with **`Delete`**. **Tooltips** are also available on buttons to provide information. |
 
 -----
 
-## ⚙️ Kurulum ve Başlatma
+## ⚙️ Installation and Launch
 
-Bu uygulamayı çalıştırmak için **Python 3.x** ve **`psutil`** kütüphanesine ihtiyacınız vardır.
+You need **Python 3.x** and the **`psutil`** library to run this application.
 
-### 1\. Kütüphane Kurulumu
+### 1\. Library Installation
 
-Aşağıdaki komutu kullanarak gerekli bağımlılıkları kurun:
+Install the required dependencies using the following command:
 
 ```bash
 pip install psutil
 ```
 
-### 2\. Başlatma
+### 2\. Launch
 
-Kodu kaydettiğiniz dosyayı (örneğin `iw_ram_cleaner.py`) terminalde çalıştırın:
+Run the file where you saved the code (e.g. `iw_ram_cleaner.py`) in the terminal:
 
 ```bash
 python iw_ram_cleaner.py
 ```
 
-> 🚨 **Yönetici Yetkisi:** Windows veya Linux sistemlerinde kritik süreçleri güvenilir bir şekilde sonlandırmak için uygulamayı **Yönetici/Root** yetkileriyle çalıştırmanız önerilir.
+> 🚨 **Administrator Privileges:** To reliably terminate critical processes on Windows or Linux systems, it is recommended to run the application with **Administrator/Root** privileges.
 
 -----
 
-## ⬇️ Kullanıcı İndirme ve Başlatma
+## ⬇️ User Download and Launch
 
-Uygulamanın çalıştırılabilir (.exe) versiyonunu indirmek için lütfen **GitHub Releases** sayfasına gidin ve en güncel sürümü (örneğin v0.1.0-beta etiketi altındaki **iwrc.exe** dosyasını) indirin.
+To download the executable (.exe) version of the application, please go to the **GitHub Releases** page and download the latest release (for example, the **iwrc.exe** file under the v0.1.0-beta tag).
 
-## 🖥️ Kullanım Rehberi
+## 🖥️ Usage Guide
 
-1. **Üst Panel** → CPU, RAM, Disk ve Ağ hızınızı gerçek zamanlı izleyin.
-2. **RAM Durumu** → Toplam / Kullanılan / Boşta bellek miktarları detaylı gösterilir.
-3. **Süreç Listesi** → En çok RAM tüketen süreçler başta gelir. Kritik olanlar 🚨 ile işaretlenir.
-4. **Arama** → Süreç adı veya PID yazarak hızlı filtreleme yapın.
-5. **Sonlandırma**
-   - Bir veya birden fazla süreci seçin (`Ctrl` / `Shift` veya sürükle).
-   - `💥 RAM SERBEST BIRAK / SONLANDIR` butonuna tıklayın ya da `Delete` tuşuna basın.
-   - Kritik süreçler otomatik engellenir, onay istenir.
-6. **Yenileme** → `🔄 YENİLE (F5)` butonu veya F5 tuşu ile tüm verileri güncelleyin.
-
------
-
-## 🎨 Retro Tema Renk Şeması
-
-| Bileşen          | Hex Kodu    | Açıklama                  |
-|------------------|-------------|---------------------------|
-| **Derin Arka Plan** | `#0a0a0a`   | Ana BG                    |
-| **Katman 1**        | `#1a1a1a`   | Paneller                  |
-| **Katman 2**        | `#252525`   | İç çerçeveler             |
-| **Neon Cyan**       | `#00BFFF`   | RAM, normal butonlar      |
-| **Neon Pembe**      | `#FF1493`   | Başlıklar, kill butonu    |
-| **Neon Mor**        | `#9D00FF`   | Border ve vurgular        |
-| **Neon Kırmızı**    | `#FF0055`   | Kritik uyarılar           |
-| **Neon Yeşil**      | `#00FF7F`   | İstatistikler             |
+1. **Top Panel** → Monitor your CPU, RAM, Disk, and Network speeds in real time.
+2. **RAM Status** → Total / Used / Free memory amounts are displayed in detail.
+3. **Process List** → Processes consuming the most RAM appear at the top. Critical ones are marked with 🚨.
+4. **Search** → Quickly filter by typing a process name or PID.
+5. **Termination**
+   - Select one or more processes (`Ctrl` / `Shift` or drag).
+   - Click the `💥 FREE RAM / TERMINATE` button or press the `Delete` key.
+   - Critical processes are automatically blocked and confirmation is requested.
+6. **Refresh** → Update all data with the `🔄 REFRESH (F5)` button or the F5 key.
 
 -----
 
-## 🤝 Katkıda Bulunma
+## 🎨 Retro Theme Color Scheme
 
-1. Fork edin
-2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Push edin (`git push origin feature/AmazingFeature`)
-5. Pull Request açın
+| Component           | Hex Code    | Description               |
+|---------------------|-------------|---------------------------|
+| **Deep Background** | `#0a0a0a`   | Main BG                   |
+| **Layer 1**         | `#1a1a1a`   | Panels                    |
+| **Layer 2**         | `#252525`   | Inner frames              |
+| **Neon Cyan**       | `#00BFFF`   | RAM, normal buttons       |
+| **Neon Pink**       | `#FF1493`   | Headers, kill button      |
+| **Neon Purple**     | `#9D00FF`   | Borders and highlights    |
+| **Neon Red**        | `#FF0055`   | Critical warnings         |
+| **Neon Green**      | `#00FF7F`   | Statistics                |
 
-Detaylar için [CONTRIBUTING.md](CONTRIBUTING.md) ve [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) dosyasını inceleyiniz.
+-----
 
-## 📄 Lisans
+## 🤝 Contributing
 
-Bu proje MIT lisansı altında dağıtılmaktadır. Detaylar için [LICENSE.md](LICENSE.md) dosyasını inceleyiniz.
+1. Fork it
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+For details, please refer to [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+## 📄 License
+
+This project is distributed under the MIT license. For details, please refer to [LICENSE.md](LICENSE.md).
+
+---
+
+🌍 For Turkish version, see: [README-tr-TR.md](README-tr-TR.md)
